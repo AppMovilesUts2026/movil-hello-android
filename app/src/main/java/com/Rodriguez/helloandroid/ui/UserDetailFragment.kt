@@ -11,6 +11,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.Rodriguez.helloandroid.databinding.FragmentUserDetailBinding
 import com.Rodriguez.helloandroid.viewmodel.UserViewModel
+import androidx.navigation.fragment.navArgs
 
 class UserDetailFragment : Fragment() {
 
@@ -18,6 +19,7 @@ class UserDetailFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel: UserViewModel by activityViewModels()
+    private val args: UserDetailFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,10 +33,16 @@ class UserDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        loadUserById(args.userId)
+
         setupObservers()
         setupClickListeners()
     }
-
+    private fun loadUserById(userId: Int) {
+        viewModel.users.value?.find { it.id == userId }?.let { user ->
+            viewModel.selectUser(user)
+        }
+    }
     private fun setupObservers() {
         viewModel.selectedUser.observe(viewLifecycleOwner) { user ->
             user?.let {
