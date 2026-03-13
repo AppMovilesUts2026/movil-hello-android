@@ -1,32 +1,19 @@
     package com.Rodriguez.helloandroid
-
-
     import android.os.Bundle
+    import androidx.activity.viewModels
     import androidx.appcompat.app.AppCompatActivity
-    import android.widget.Button
-    import android.widget.TextView
-    import android.widget.Toast
+    import com.Rodriguez.helloandroid.viewmodel.UserViewModel
 
     class MainActivity : AppCompatActivity() {
+
+        // ViewModel a nivel de Activity (compartido con fragments)
+        private val viewModel: UserViewModel by viewModels()
 
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_main)
 
-            val textView = findViewById<TextView>(R.id.txtSaludo)
-            val btnSaludo = findViewById<Button>(R.id.btnSaludo)
-
-            var contador = 0
-
-            btnSaludo.setOnClickListener {
-                contador++
-                textView.text = "Has hecho clic $contador veces"
-
-                Toast.makeText(
-                    this,
-                    "¡Hola, el botón ha sido presionado!",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
+            // El Fragment se carga automáticamente desde el XML
+            // El ViewModel está disponible para todos los fragments
         }
     }

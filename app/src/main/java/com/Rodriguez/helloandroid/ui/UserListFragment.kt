@@ -1,0 +1,72 @@
+package com.Rodriguez.helloandroid.ui
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.Rodriguez.helloandroid.R
+import com.Rodriguez.helloandroid.databinding.FragmentUserListBinding
+import com.Rodriguez.helloandroid.viewmodel.UserViewModel
+import androidx.navigation.fragment.findNavController
+
+class UserListFragment : Fragment() {
+
+    // ViewBinding para referenciar vistas
+    private var _binding: FragmentUserListBinding? = null
+    private val binding get() = _binding!!
+
+    // ViewModel compartido a nivel de Activity
+    private val viewModel: UserViewModel by activityViewModels()
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentUserListBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setupObservers()
+        setupClickListeners()
+    }
+
+    private fun setupObservers() {
+        // Observar cambios en la lista de usuarios
+        viewModel.users.observe(viewLifecycleOwner) { userList ->
+            // Por ahora solo mostrar el contador
+            binding.textViewUserCount.text = "Total usuarios: ${userList.size}"
+
+            // Mostrar lista en un TextView temporal
+            val userNames = userList.joinToString("\n") { "${it.name} - ${it.email}" }
+            binding.textViewUserList.text = userNames
+        }
+
+        // Observar estado de carga
+        viewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
+            binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+        }
+    }
+
+    private fun setupClickListeners() {
+        binding.buttonAddUser.setOnClickListener {
+            // Navegar al primer usuario como ejemplo
+            viewModel.users.value?.firstOrNull()?.let { user ->
+                viewModel.selectUser(user)
+                findNavController().navigate(R.id.action_list_to_detail)
+            }
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null // Evitar memory leaks
+    }
+}
