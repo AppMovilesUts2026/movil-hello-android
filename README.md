@@ -36,6 +36,8 @@ Safe Args evita errores de tipo de datos al pasar información entre fragments. 
 
    El Repository organiza el acceso a los datos (base de datos, API, etc.) y separa esa lógica del resto de la aplicación.
 
+
+
    
 
 
