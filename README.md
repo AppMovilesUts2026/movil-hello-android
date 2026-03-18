@@ -1,8 +1,8 @@
 # Taller 1 - Hello Android
 
 ## Información del Estudiante
-- Nombre: Sergio Rodríguez _  Michael Alberto Romero Gonzalez _ Anderson Sanguino Suarez
-- Código: 1098820679 _ 100487913 _1005538900
+- Nombre: Sergio Rodríguez _  Michael Alberto Romero Gonzalez _ Anderson Sanguino Suarez _ Marlon Andres Ramirez Chirivi
+- Código: 1098820679 _ 100487913 _ 1005538900 _ 1095950857
 - Fecha: 06/03/2026
 
 ## Respuestas
@@ -25,5 +25,7 @@ Algunas aplicaciones famosas que utilizan Kotlin son:
 
 ## Capturas de Pantalla
 
-![Captura del emulador](docs/captura_emulador1.png)
-![Captura del emulador](docs/captura_emulador2.png)
+![Captura del emulador](docs/captura_emulador_1.png)
+![Captura del emulador](docs/captura_emulador_2.png)
+![Captura del emulador](docs/captura_emulador_3.png)
+![Captura del emulador](docs/captura_emulador_4.png)
