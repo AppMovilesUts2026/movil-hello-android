@@ -1,7 +1,7 @@
 # Taller 2 - Arquitectura MVVM Fragments y Navigation component
 
 ## Información del Estudiante
-<<<<<<< HEAD
+
 - Nombre: Sergio Rodríguez _  Michael Alberto Romero Gonzalez _ Anderson Sanguino Suarez _ Marlon Andres Ramirez Chirivi
 - Código: 1098820679 _ 100487913 _ 1005538900 _ 1095950857
 - Fecha: 06/03/2026
@@ -9,7 +9,7 @@
 - Nombre: Sergio Rodríguez _  Michael Alberto Romero Gonzalez _ Anderson Sanguino Suarez - Marlon 
 - Código: 1098820679 _ 100487913 _1005538900
 - Fecha: 06/03/202
->>>>>>> 7fd00a0b72e8ad62951228a225ff40a595e81d43
+
 
 ## Respuestas
 
@@ -47,11 +47,8 @@ Safe Args evita errores de tipo de datos al pasar información entre fragments. 
    
 
 
-
-<<<<<<< HEAD
 ![Captura del emulador](docs/captura_emulador_1.png)
 ![Captura del emulador](docs/captura_emulador_2.png)
 ![Captura del emulador](docs/captura_emulador_3.png)
 ![Captura del emulador](docs/captura_emulador_4.png)
-=======
->>>>>>> 7fd00a0b72e8ad62951228a225ff40a595e81d43
+
