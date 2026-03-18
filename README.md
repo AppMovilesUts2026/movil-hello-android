@@ -1,31 +1,57 @@
-# Taller 1 - Hello Android
+# Taller 2 - Arquitectura MVVM Fragments y Navigation component
 
 ## Información del Estudiante
+<<<<<<< HEAD
 - Nombre: Sergio Rodríguez _  Michael Alberto Romero Gonzalez _ Anderson Sanguino Suarez _ Marlon Andres Ramirez Chirivi
 - Código: 1098820679 _ 100487913 _ 1005538900 _ 1095950857
 - Fecha: 06/03/2026
+=======
+- Nombre: Sergio Rodríguez _  Michael Alberto Romero Gonzalez _ Anderson Sanguino Suarez - Marlon 
+- Código: 1098820679 _ 100487913 _1005538900
+- Fecha: 06/03/202
+>>>>>>> 7fd00a0b72e8ad62951228a225ff40a595e81d43
 
 ## Respuestas
 
-### 1. Función del AndroidManifest.xml
-El archivo AndroidManifest.xml es el archivo de configuración principal de una aplicación Android. Define los componentes de la aplicación como actividades (activities), servicios (services), receptores (broadcast receivers) y proveedores de contenido. Además, especifica los permisos que la aplicación necesita, el nombre del paquete y otras configuraciones esenciales para que el sistema operativo pueda ejecutar la aplicación correctamente.
+## Pruebas de Comprensión
+### ¿Por qué los datos no se pierden al rotar? Explicar el rol del ViewModel.
+Porque el ViewModel guarda los datos y no se destruye cuando la pantalla rota. Cuando la Activity o Fragment se recrea, el ViewModel mantiene la información y la vuelve a mostrar.
+### ¿Qué ventaja tiene usar LiveData en lugar de actualizar la UI manualmente?
+LiveData actualiza la interfaz automáticamente cuando cambian los datos, evitando tener que actualizar la UI manualmente y reduciendo errores.
+### ¿Qué problema resuelve Safe Args comparado con usar Bundle manualmente?
+Safe Args evita errores de tipo de datos al pasar información entre fragments. Con Bundle puedes equivocarte en nombres o tipos; Safe Args lo valida automáticamente.
 
-### 2. Diferencia entre activity_main.xml y MainActivity.kt
-El archivo activity_main.xml define la interfaz gráfica de usuario (UI), es decir, cómo se ven los elementos en pantalla como botones, textos y layouts.  
-El archivo MainActivity.kt contiene la lógica del programa escrita en Kotlin, donde se programa el comportamiento de la aplicación y se controlan las acciones del usuario, como los clics en botones.
+## Respuestas a Preguntas Conceptuales
+#### 1. ¿Qué problema resuelve el ViewModel en Android?
 
-### 3. Gestión de recursos en Android
-Android maneja los recursos limitados del dispositivo mediante un sistema de administración de memoria y procesos. El sistema asigna prioridad a las aplicaciones que están en uso y puede cerrar aplicaciones en segundo plano cuando hay poca memoria disponible. También optimiza el uso de batería, CPU y almacenamiento para garantizar un buen rendimiento del dispositivo.
+   El ViewModel guarda y maneja los datos de la interfaz, evitando que se pierdan cuando la pantalla cambia o se recrea.
 
-### 4. Aplicaciones famosas que usan Kotlin
-Algunas aplicaciones famosas que utilizan Kotlin son:
-- Pinterest
-- Trello
-- Evernote
+#### 2. ¿Por qué LiveData es "lifecycle-aware" y qué beneficio trae?
 
-## Capturas de Pantalla
+   Porque solo actualiza la UI cuando la Activity o Fragment está activo, evitando errores y consumo innecesario de recursos.
 
+#### 3. Explica con tus propias palabras el flujo de datos en MVVM
+
+   El Model contiene los datos, el ViewModel los procesa y el View (Activity o Fragment) los muestra en pantalla.
+
+#### 4. ¿Qué ventaja tiene usar Fragments vs múltiples Activities?
+
+   Los Fragments permiten reutilizar partes de la interfaz dentro de una misma Activity y hacen la navegación más flexible.
+
+#### 5. ¿Cómo ayuda el Repository Pattern a la arquitectura?
+
+   El Repository organiza el acceso a los datos (base de datos, API, etc.) y separa esa lógica del resto de la aplicación.
+
+
+
+   
+
+
+
+<<<<<<< HEAD
 ![Captura del emulador](docs/captura_emulador_1.png)
 ![Captura del emulador](docs/captura_emulador_2.png)
 ![Captura del emulador](docs/captura_emulador_3.png)
 ![Captura del emulador](docs/captura_emulador_4.png)
+=======
+>>>>>>> 7fd00a0b72e8ad62951228a225ff40a595e81d43
