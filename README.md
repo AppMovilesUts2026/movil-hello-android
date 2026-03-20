@@ -38,7 +38,7 @@ LiveData actualiza la interfaz automáticamente cuando cambian los datos, evitan
 Safe Args evita errores de tipo de datos al pasar información entre fragments. Con Bundle puedes equivocarte en nombres o tipos; Safe Args lo valida automáticamente.
 
 
-
+![Diagrama](docs/Diagrama.jpeg)
 
 ![Captura del emulador](docs/captura_emulador_1.jpeg)
 ![Captura del emulador](docs/captura_emulador_2.jpeg)
