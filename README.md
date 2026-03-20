@@ -39,6 +39,7 @@ Safe Args evita errores de tipo de datos al pasar información entre fragments. 
 
 
 
+
 ![Captura del emulador](docs/captura_emulador_1.jpeg)
 ![Captura del emulador](docs/captura_emulador_2.jpeg)
 ![Captura del emulador](docs/captura_emulador_3.jpeg)
